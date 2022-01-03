@@ -1,0 +1,24 @@
+:root {
+  --color-background: #eaeaea;
+  --color-box-background: #ffffff;
+  --color-text-title: #1b1b1b;
+  --color-text-base: #39393a;
+  --color-text-complementar: #8f8f8f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-base);
+	
+}
+
+.container {
+  width: min(90vw, 500px);
+  margin: auto;
+}
