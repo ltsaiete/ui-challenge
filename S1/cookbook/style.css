@@ -76,5 +76,7 @@ main ol {
 }
 
 footer {
-  margin-top: 2.4rem;
+  margin-top: 3.2rem;
+  text-align: center;
+  padding-bottom: 1.6rem;
 }
