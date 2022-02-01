@@ -13,10 +13,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 93.75%;
-}
-
 body {
   background: var(--color-background);
   color: var(--color-text-base);
