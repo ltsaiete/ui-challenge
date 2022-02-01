@@ -30,7 +30,7 @@
         </p>
       </section>
 
-      <form action="">
+      <form action="" onsubmit="handleSubmit(event)">
         <label for="email">Insira o seu e-mail:</label>
         <div class="input-group">
           <input
@@ -38,6 +38,7 @@
             name="email"
             id="email"
             placeholder="oi@rocketseat.com.br"
+            required
           />
           <button type="submit">
             <img src="./assets/send.svg" alt="enviar" />
@@ -45,12 +46,13 @@
         </div>
       </form>
 
-      <a href="">
+      <a href="https://github.com/gdscuem/newsletter">
         <span>Deixe-me ler primeiro </span>
         <img src="./assets/arrow-right.svg" alt="ir" />
       </a>
     </main>
 
     <img src="./assets/read_news.jpg" alt="Lendo as notícias" />
+    <script src="script.js"></script>
   </body>
 </html>
