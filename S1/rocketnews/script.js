@@ -1,16 +1,39 @@
-function handleSubmit(event) {
-  event.preventDefault();
-  const email = document.querySelector("#email").value;
-  const emails = JSON.parse(localStorage.getItem("rocketnews:emails")) || [];
+const Storage = {
+	getEmails() {
+		return JSON.parse(localStorage.getItem('rocketnews:emails')) || [];
+	},
+	setEmails(emails) {
+		localStorage.setItem('rocketnews:emails', JSON.stringify(emails));
+	}
+};
 
-  if (emails.indexOf(email) >= 0) {
-    alert("Email ja existente");
-    return 0;
-  }
-  emails.push(email);
-  console.log(emails);
+const Email = {
+	all: Storage.getEmails(),
 
-  localStorage.setItem("rocketnews:emails", JSON.stringify(emails));
+	add(email) {
+		if (this.exists(email)) {
+			return;
+		}
+		this.all.push(email);
+		Storage.setEmails(this.all);
 
-  alert("Email salvo com sucesso!");
-}
+		alert('Email salvo com sucesso!');
+	},
+
+	exists(email) {
+		if (this.all.indexOf(email) >= 0) {
+			alert('Email ja existente');
+			return true;
+		}
+		return false;
+	}
+};
+
+const Form = {
+	submit(event) {
+		event.preventDefault();
+		const email = document.querySelector('#email').value;
+
+		Email.add(email);
+	}
+};
