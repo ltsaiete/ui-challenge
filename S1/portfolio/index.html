@@ -4,39 +4,57 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
 		<title>Portfolio</title>
 	</head>
 	<body>
 		<main>
-			<header class="basic-data">
-				<img src="" alt="avatar" />
+			<header class="basic-data card">
+				<img src="./assets/avatar.jpg" alt="avatar" />
 				<h2>Luís Titos Saiete</h2>
 				<span>Software Engineer</span>
 			</header>
 
-			<section class="more-info">
-				<div class="icons">
-					<img src="" alt="morada" />
-					<img src="" alt="empresa" />
-					<img src="" alt="github" />
-					<img src="" alt="linkedin" />
-					<img src="" alt="twitter" />
-					<img src="" alt="site" />
-					<img src="" alt="email" />
+			<section class="more-info card">
+				<div class="detail country">
+					<img src="./assets/map-pin.svg" alt="morada" />
+					<span>Moçambique</span>
 				</div>
 
-				<div class="descriptions">
-					<span>Moçambique</span>
+				<div class="detail company">
+					<img src="./assets/briefcase.svg" alt="empresa" />
 					<span>Paymentsds</span>
+				</div>
+
+				<div class="detail github-account">
+					<img src="./assets/github.svg" alt="github" />
 					<span>ltsaiete</span>
+				</div>
+				<div class="detail linkedin">
+					<img src="./assets/linkedin.svg" alt="linkedin" />
 					<span>ltsaiete</span>
+				</div>
+				<div class="detail twitter">
+					<img src="./assets/twitter.svg" alt="twitter" />
 					<span>ltsaiete</span>
+				</div>
+				<div class="detail website">
+					<img src="./assets/globe.svg" alt="site" />
 					<span>ltsaiete.com</span>
+				</div>
+				<div class="detail email">
+					<img src="./assets/mail.svg" alt="email" />
 					<span>luistsaiete@gmail.com</span>
 				</div>
 			</section>
 
-			<section class="technologies">
+			<section class="technologies card">
 				<h2>Tecnologias</h2>
 				<ul>
 					<li>Javascript</li>
@@ -49,7 +67,7 @@
 				</ul>
 			</section>
 
-			<section class="experiences">
+			<section class="experiences card">
 				<h2>Experiências</h2>
 				<ul>
 					<li>
@@ -72,7 +90,7 @@
 				</ul>
 			</section>
 
-			<section class="education">
+			<section class="education card">
 				<h2>Educação</h2>
 				<ul>
 					<li>
@@ -91,14 +109,14 @@
 		</main>
 
 		<aside>
-			<header class="projects">
+			<header class="projects card">
 				<h2>My projects</h2>
 				<span>Veja todos</span>
 			</header>
 			<section class="repos-list">
 				<article class="card">
 					<header class="repo-name">
-						<img src="" alt="icon" />
+						<img src="./assets/folder.svg" alt="icon" />
 						<h3>my-onix</h3>
 					</header>
 					<p>
@@ -107,23 +125,27 @@
 					</p>
 
 					<footer>
-						<section class="counts">
-							<div class="stars-count">
-								<img src="" alt="star" />
-								<span>100</span>
+						<section class="counts flex-box">
+							<div class="stars-count flex-box">
+								<img src="./assets/star.svg" alt="star" />
+								<small>100</small>
 							</div>
-							<div class="forks-count">
-								<img src="" alt="fork" />
-								<span>100</span>
+							<div class="branchs-count flex-box">
+								<img src="./assets/git-branch.svg" alt="git branch" />
+								<small>100</small>
 							</div>
 						</section>
-						<section class="language"></section>
+
+						<section class="language flex-box">
+							<div class="language-color"></div>
+							<span>Javascript</span>
+						</section>
 					</footer>
 				</article>
 
 				<article class="card">
 					<header class="repo-name">
-						<img src="" alt="icon" />
+						<img src="./assets/folder.svg" alt="icon" />
 						<h3>my-onix</h3>
 					</header>
 					<p>
@@ -132,38 +154,44 @@
 					</p>
 
 					<footer>
-						<section class="counts">
-							<div class="stars-count">
-								<img src="" alt="star" />
-								<span>100</span>
+						<section class="counts flex-box">
+							<div class="stars-count flex-box">
+								<img src="./assets/star.svg" alt="star" />
+								<small>100</small>
 							</div>
-							<div class="forks-count">
-								<img src="" alt="fork" />
-								<span>100</span>
+							<div class="branchs-count flex-box">
+								<img src="./assets/git-branch.svg" alt="git branch" />
+								<small>100</small>
 							</div>
 						</section>
-						<section class="language"></section>
+
+						<section class="language flex-box">
+							<div class="language-color"></div>
+							<span>Javascript</span>
+						</section>
 					</footer>
 				</article>
 			</section>
 
-			<h2>Recent posts</h2>
+			<header class="articles card">
+				<h2>Recent posts</h2>
+			</header>
 
-			<section class="articles">
-				<article>
-					<img src="" alt="article-image" />
+			<section class="articles-list">
+				<article class="card">
+					<img src="./assets/avatar.jpg" alt="article-image" />
 					<section>
 						<h3>Percorrendo arrays em JS</h3>
 						<small>1 ano atrás</small>
 
 						<p>Formas de percorrer arrays em Javascript</p>
 
-						<div class="tags">
+						<footer class="tags">
 							<span>JS</span>
 							<span>JS</span>
 							<span>JS</span>
 							<span>JS</span>
-						</div>
+						</footer>
 					</section>
 				</article>
 			</section>
